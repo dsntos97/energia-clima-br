@@ -7,7 +7,11 @@ authors = [
     { name = "dsntos97", email = "santos.julio.97.cesar@gmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "duckdb>=1.5.6",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+]
 
 [project.scripts]
 energia-clima = "energia_clima:main"
