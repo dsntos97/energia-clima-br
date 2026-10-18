@@ -9,10 +9,12 @@
   - E1/1.2 concluída (2024): [N] linhas, [N] dias distintos, 4 subsistemas por dia.
   Nulos: [N]. Duplicatas: [N]. Unidade da carga: [conforme dicionário].
   Média por subsistema: SE [x], NE [x], S [x], N [x].
+  - E1/1.3: validar a API Open-Meteo
+
 
 
 ## Proximo passo exato 
-- E1/1.3: validar a API Open-Meteo
+E1/1.4: modelo estrela e janela de anos
 
 ## Bloqueios 
 - nenhum
