@@ -128,3 +128,13 @@ print(junta["_merge"].value_counts())
 print("\n correlacao carga x temperatura media por subsistema: ")
 for sub, g in junta.groupby("id_subsistema"):
     print(f" {sub:<3} {g["carga_mwmed"].corr(g["temp_media"]):.2f}")
+
+    #%% [7] ate que dia vai o arquivo de 2026
+    import duckdb
+
+    duckdb.sql("""
+                SELECT min(CAST(din_instante AS DATE)) AS primeiro_dia,
+                        max(CAST(din_instate AS DATE)) AS ultimo_dia,
+                        count(DISTINCT CAST(din_instante AS DATE)) AS dias,
+                        count(*)                                AS linhas
+                        FROM read_parquet('data/samples/CARGA_ENERGIA_2024.parquet')""").df()
